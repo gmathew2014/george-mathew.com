@@ -1,0 +1,56 @@
+{% capture content %}
+
+
+
+    <!-- ######################   Projects >> Header  ###################### -->
+
+    <div class="grid  container--main  projects">
+
+           <div class="grid__item  one-third  lap-one-whole  palm-one-whole">
+                 <a href="/projects">
+                   <h2 class="projects__subheading  projects__subheading-project">Design & Development</h2>
+                   <h3 class="projects__sub-subheading">Portfolio</h3>
+                 </a>
+           </div><!--
+
+        --><div class="grid__item  two-thirds  lap-one-whole  palm-one-whole  about__intro">
+                <h1 class="projects__alpha">{{title}}</h1>
+
+                <p class="projects__description">
+                 	<span class="projects__caption">objective</span> {{meta['objective']}}
+                </p>
+                <div class="grid  projects__categories">
+                  <div class="grid__item  one-half  lap-one-half  palm-one-whole" style="padding-right: 10px;">
+                  <span class="projects__caption">Scope:</span> 
+	                  <em>{% for tag in taxonomy['Scope'] %}
+					  {{tag.value}}</em>{% endfor %}.
+				</div><!-- 
+                   --><div class="grid__item  one-half  lap-one-half  palm-one-whole">
+                     <span class="projects__caption">Industry:</span> <em><em>{% for tag in taxonomy['Industry'] %} {{tag.value}}</em>{% endfor %}</em>.
+                   </div>
+               </div>
+           </div>
+
+            <hr class="rule--hero  rule--resume">
+    </div>
+
+
+    <!-- ######################   Projects Page >> Projects Feed ###################### -->
+
+
+     <!-- Begin Article Feed Content -->
+
+    <div class="grid  container--main">
+     <!--  <img src="http://placehold.it/960x600"> -->
+     
+      {{body}}
+
+
+
+    </div>
+
+
+
+{% endcapture %}
+
+{% include 'layouts/default' %}

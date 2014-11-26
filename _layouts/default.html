@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="stylesheet" href="/build/css/style.css">
+
+  <title>{{site.title}} — {{title}}</title>
+
+  <meta property="twitter:account_id" content="{{{site.meta['twitter_id']}}">
+  <meta name='description' content="{{site.meta['description']}}">
+
+  <link rel='icon' type='image/png' href='/images/favicon.png'>
+  <link rel='shortcut icon' type='image/png' href='/images/favicon.png'>
+
+  <link type="application/rss+xml" rel="alternate" title="George Mathew" href="{{site.meta['feed_url']}}">
+
+  {% include 'includes/typekit' %}
+  {% include 'includes/analytics' %}
+
+</head>
+<body>
+
+
+   <!-- ######################   Header  ###################### -->
+
+    <div class="grid  container--main">
+
+           <div class="grid__item  one-third  lap-one-whole  palm-one-whole">
+                  <span class="logo"><a href="/">George Mathew</a></span>
+           </div><!--
+
+        --><div class="grid__item  two-thirds  lap-one-whole  palm-one-whole  ">
+                <ul class="nav navigation">
+                   <li><a href="/about">About</a></li>
+                   <li><a href="/projects">Projects</a></li>
+                   <li><a href="/writing">Writing</a></li>
+               </ul>
+           </div><!--
+
+        --><div class="grid__item  one-whole  rule--orange-top">
+           </div>
+    </div>
+
+
+    <!-- ######################   Content Area  ###################### -->
+
+
+    {{content}}
+
+
+    <!-- ######################   Footer  ###################### -->
+
+
+    <div class="grid container--main">
+
+          <div class="grid__item  one-whole  rule--orange-bottom">
+          </div><!--
+
+       --><div class="grid__item  one-third  lap-one-whole  palm-one-whole">
+            {% include 'includes/social_footer' %}
+          </div><!--
+
+        --><div class="grid__item  two-thirds  lap-one-whole  palm-one-whole">
+               <p class="copyright"><em><small>{{site.meta['copyright']}} </small></em></p>
+           </div>
+    </div>
+
+
+</body>
+</html>

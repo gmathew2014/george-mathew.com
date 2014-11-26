@@ -1,0 +1,54 @@
+{% capture content %}
+
+    <!-- ######################   Writing >> Header  ###################### -->
+
+    <div class="grid  container--main  writing">
+
+           <div class="grid__item  one-third  lap-one-whole  palm-one-whole">
+                 <h2 class="writing__subheading"><a href="writing.html">Notes & Ruminations</a></h2>
+           </div><!--
+
+        --><div class="grid__item  two-thirds  lap-one-whole  palm-one-whole  about__intro">
+                <h1 class="article__alpha">{{title}}</h1>
+
+           </div>
+
+            <hr class="rule--hero  rule--resume  push--soft-top">
+    </div>
+
+
+    <!-- ######################   Writing Page >> Article Feed ###################### -->
+
+
+     <!-- Begin Article Feed Content -->
+
+    <section class="grid  container--main  writing__content">
+        <div class="grid__item  one-third lap-one-whole  palm-one-whole  negative--top  article__meta">
+              <span class="article__date">{{date | date: "%b %d, %Y"}}<span><br>
+              <section class="article__tags">
+                <h3>Filed under</h3><br>
+                <p class="tags">{% for tag in taxonomy['tags'] %}{{tag.value}}{% endfor %}.</p>
+
+              </section>
+        </div><!--
+
+      --><article class="grid__item  two-thirds  lap-one-whole  palm-one-whole  negative--top2x article">
+            {{body}}
+
+            <hr class="rule--hero  rule--resume  push--soft-top">
+
+        </article><!-- 
+      --><div class="grid__item one-third lap-one-whole palm-one-whole"></div>
+         <div class="grid__item  one-third lap-one-whole  palm-one-whole  push--top  issue">
+               <span class="issue__number">Issue 1<span><br>  <a href="/writing">
+               <p class="issue__overline">Back to the Future:</p>
+               <p class="issue__headline"> New Beginning</p>
+               <p class="issue__season">Summer/Fall 2014</p></a>
+          </div>
+    </section>
+
+
+  
+  {% endcapture %}
+
+{% include 'layouts/default' %}
