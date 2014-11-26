@@ -3,4 +3,4 @@ About
 
 *GM personal website, v1 (using Siteleaf)*
 
-© Copyright 2013 Collectif Media Co - Do not distribute.
+© Copyright 2014 George Mathew. Do not distribute.
