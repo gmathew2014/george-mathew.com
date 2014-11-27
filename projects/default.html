@@ -21,12 +21,25 @@
                 </p>
                 <div class="grid  projects__categories">
                   <div class="grid__item  one-half  lap-one-half  palm-one-whole" style="padding-right: 10px;">
-                  <span class="projects__caption">Scope:</span> 
-	                  <em>{% for tag in taxonomy['Scope'] %}
-					  {{tag.value}}</em>{% endfor %}.
-				</div><!-- 
+                       <ol class="nav  taxonomy">
+                        <li class="projects__caption">Scope:</li>
+                        {% for tag in taxonomy['Scope'] %}
+                        <li class="tags">
+                          <em>{{tag.value}}</em>
+                        </li>
+                        {% endfor %}
+                      </ol>
+				        </div><!--
                    --><div class="grid__item  one-half  lap-one-half  palm-one-whole">
-                     <span class="projects__caption">Industry:</span> <em><em>{% for tag in taxonomy['Industry'] %} {{tag.value}}</em>{% endfor %}</em>.
+
+                      <ol class="nav  taxonomy">
+                        <li class="projects__caption">Industry:</li>
+                        {% for tag in taxonomy['Industry'] %}
+                        <li class="tags">
+                          <em>{{tag.value}}</em>
+                        </li>
+                        {% endfor %}
+                      </ol>
                    </div>
                </div>
            </div>
@@ -42,7 +55,7 @@
 
     <div class="grid  container--main">
      <!--  <img src="http://placehold.it/960x600"> -->
-     
+
       {{body}}
 
 
