@@ -1,0 +1,384 @@
+// Writing Page  >>  Header           -------------------##############
+
+.writing {
+	margin-top: -40px;
+}
+
+.writing__heading {
+	font-size: 55px;
+	@include media-query(lap) {
+		margin-left: -$base-spacing-unit;
+	}
+	line-height: 65px;
+	text-rendering: optimizeLegibility;
+}
+
+.writing__subheading {
+	padding-top: 55px;
+	font-weight: 400;
+	font-size: 20px;
+	@include media-query(palm) {
+		padding-top: 0px;
+		margin-bottom: 0px;
+	}
+
+	@include media-query(lap) {
+		padding-top: 0px;
+		margin-bottom: 0px;
+	}
+	text-rendering: optimizeLegibility;
+}
+
+.writing__introtext {
+	font-size: 20px;
+	font-weight: 400;
+	margin-top: -16px;
+	margin-bottom: $base-spacing-unit+20px;
+	@include media-query(lap) {
+		margin-left: -$base-spacing-unit;
+	}
+	text-rendering: optimizeLegibility;
+}
+
+.writing__content {
+	margin-top: $base-spacing-unit*2+16px;
+}
+
+
+// Writing Page  >>  Issues            -------------------##############
+
+.issue {
+	margin-bottom: $base-spacing-unit*2;
+	@include media-query(palm) {
+		margin-top: -55px;
+		text-align: center;
+		border: 10px solid lightgrey;
+		padding: $base-spacing-unit;
+		margin-bottom: 65px;
+	}
+	@include media-query(lap) {
+		margin-top: -55px;
+	}
+}
+
+.issue__number {
+	font-family: $brand-altface;
+	font-size: 12px;
+	font-weight: 800;
+	border-bottom: 3px solid black;
+	text-transform: uppercase;
+}
+
+.issue__overline {
+	font-family: $brand-altface;
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-top: $base-spacing-unit*1.5;
+	margin-bottom: 0px;
+}
+
+.issue__headline {
+	font-family: $brand-altface;
+	font-size: 25px;
+	font-weight: 700;
+}
+
+.issue__season {
+	font-family: $brand-altface;
+	font-size: 18px;
+	font-weight: 400;
+	color: $brand-color;
+	text-transform: none;
+}
+
+// Writing Page  >>  Article Feed         -------------------##############
+
+.writing__feed {
+	a:link {
+		text-decoration: none;
+	}
+}
+
+.writing__category {
+	font-family: $brand-altface;
+	font-size: 10px;
+	color: $brand-color;
+	border-bottom: 2px solid black;
+	text-transform: uppercase;
+	display: block;
+	font-weight: 800;
+	padding-bottom: 2px;
+}
+
+.writing__alpha {
+	font-size: 30px;
+	font-weight: 700;
+}
+
+.writing__date {
+	font-family: $brand-altface;
+	font-size: 12px;
+	color: #777777;
+	font-weight: 400;
+	margin-top: -$base-spacing-unit;
+}
+
+.writing__beta {
+	font-family: $brand-altface;
+	font-size: 12px;
+	margin-bottom: 0px;
+	text-transform: uppercase;
+}
+
+
+// Writing Page  >>  Article Content         -------------------##############
+
+.article {
+	p {
+		font-size: 20px;
+		line-height: 26px;
+		color: #343434;
+		@include media-query(palm) {
+			font-size: 17px;
+			line-height: 23px;
+		}
+		text-rendering: optimizeLegibility;
+	}
+
+	p:last-of-type:after {
+		display: inline-block;
+		vertical-align: baseline;
+		zoom: 1;
+		margin: 0 -.5em 0 .5em;
+		width: 12px;
+		height: 12px;
+		background: $brand-color;
+		content: "";
+	}
+
+	a:link {
+		border-bottom: 1px dotted grey;
+	}
+
+
+	.lead {
+		font-size: 24px;
+		line-height: 33px;
+		color: #0d0d0d;
+		@include media-query(palm) {
+			font-size: 20px;
+			line-height: 25px;
+		}
+		text-rendering: optimizeLegibility;
+		margin-top: -8px;
+
+	}
+
+	.lead__accent {
+		font-family: $brand-altface;
+		font-size: 18px;
+		line-height: 30px;
+		font-weight: 800;
+		text-transform: uppercase;
+		@include media-query(palm) {
+			font-size: 16px;
+		}
+	}
+
+	blockquote {
+		font-size: 18px;
+		line-height: 25px;
+		text-indent: 0;
+		padding-left: $base-spacing-unit+16px;
+		text-rendering: optimizeLegibility;
+		@include media-query(palm) {
+			font-size: 16px;
+			line-height: 22px;
+			padding-left: $base-spacing-unit;
+		}
+	}
+
+	blockquote.special {
+		text-rendering: optimizeLegibility;
+		padding: 30px;
+		background: #fffef0;
+		color: #333333;
+		font-size: 18px;
+		line-height: 26px;
+		font-style: italic;
+
+		.author {
+			float: right;
+		}
+	}
+
+	h2 {
+		font-family: $brand-altface;
+		font-size: 26px;
+		@include media-query(palm) {
+			font-size: 22px;
+		}
+	}
+}
+
+.article__meta {
+	margin-bottom: $base-spacing-unit*2;
+	@include media-query(palm) {
+		margin-top: -55px;
+		margin-bottom: 65px;
+	}
+	@include media-query(lap) {
+		margin-top: -55px;
+	}
+	position: relative;
+}
+
+.article__date {
+	font-weight: 700;
+	border-top: 8px solid $brand-color;
+    position: relative;
+    padding-top: 10px;
+}
+
+.article__date:before {
+    position: absolute;
+    left: 50%;
+    right: 0;
+    top: -8px;
+    border-top: 8px solid $brand-tertiary;
+    content: '';
+    padding-top: 10px;
+}
+
+.article__tags {
+	@include media-query(desk) {
+		margin-top: 55px;
+		width: 150px;
+		float: none;
+		display: block;
+	}
+
+	display: none;
+
+	h3 {
+		font-family: $brand-altface;
+		text-transform: uppercase;
+		font-size: 13px;
+		letter-spacing: 0.5px;
+		padding-bottom: 4px;
+		border-bottom: 1px dotted grey;
+				display: inline;
+	}
+
+	.taxonomy {
+		font-size: 14px;
+		font-style: italic;
+		font-weight: normal;
+		padding-top: 10px;
+	}
+}
+
+.article__tags-bottom {
+	@include media-query(desk) {
+		display: none;
+	}
+
+	h3 {
+		font-family: $brand-altface;
+		text-transform: uppercase;
+		font-size: 13px;
+		letter-spacing: 0.5px;
+		padding-bottom: 4px;
+		border-bottom: 1px dotted grey;
+				display: inline;
+	}
+
+	.tags {
+		font-size: 14px;
+		font-style: italic;
+		font-weight: normal;
+		padding-top: 10px;
+	}
+
+	p:last-of-type:after {
+		display: none;
+	}
+}
+
+.article__alpha {
+	font-size: 55px;
+	@include media-query(lap) {
+		margin-left: -$base-spacing-unit;
+	}
+	line-height: 65px;
+	@include media-query(palm) {
+		font-size: 33px;
+		line-height: 42px;
+	}
+	margin-bottom: 30px;
+	text-rendering: optimizeLegibility;
+}
+
+// Long Article Asides
+
+.aside {
+	background: #f3f3f3;
+	padding: 30px;
+	margin-bottom: $base-spacing-unit;
+	padding-bottom: 15px;
+	@include media-query(desk) {
+			margin-left: -160px;
+	}
+
+	p:last-of-type:after {
+		display: none;
+	}
+}
+
+.aside__heading {
+	font-size: 24px;
+	color: $brand-color;
+}
+
+.aside__subheading {
+	font-size: 13px;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-top: -16px;
+}
+
+.aside__footer {
+	border-top: 1px solid grey;
+	padding-top: 10px;
+
+}
+
+.aside__content {
+      p {
+      	font-size: 15px;
+      	line-height: 22px;
+      	text-rendering: optimizeLegibility;
+      }
+      @include media-query(desk) {
+			text-align:justify;
+			text-justify:inter-word;
+	       -moz-column-count: 2;
+	       -moz-column-gap: 30px;
+	       -webkit-column-count: 2;
+	       -webkit-column-gap: 30px;
+	   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
