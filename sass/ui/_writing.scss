@@ -14,17 +14,21 @@
 }
 
 .writing__subheading {
-	padding-top: 55px;
+	margin-top: 8.5%;
 	font-weight: 400;
 	font-size: 20px;
+	border-bottom-style: dotted;
+	border-bottom: 1px;
 	@include media-query(palm) {
 		padding-top: 0px;
 		margin-bottom: 0px;
+		margin-top: 0px;
 	}
 
 	@include media-query(lap) {
 		padding-top: 0px;
 		margin-bottom: 0px;
+		margin-top: 0px;
 	}
 	text-rendering: optimizeLegibility;
 }
@@ -44,6 +48,11 @@
 	margin-top: $base-spacing-unit*2+16px;
 }
 
+.writing__notes {
+	@include media-query(desk) {
+		margin-top: $base-spacing-unit*2.5;
+	}
+}
 
 // Writing Page  >>  Issues            -------------------##############
 
@@ -161,6 +170,9 @@
 		border-bottom: 1px dotted grey;
 	}
 
+	a.tweet-button {
+		border-bottom: none;
+	}
 
 	.lead {
 		font-size: 24px;
@@ -371,12 +383,20 @@
 	   }
 }
 
+.dotted {
+		border-bottom-style: dotted;
+}
 
+.fa-twitter {
+	font-size: 1.2rem;
+}
 
-
-
-
-
+#twitter-count {
+	font-size: 0.85rem;
+	font-family: $brand-altface;
+	font-weight: bold;
+	text-transform: uppercase;
+}
 
 
 

@@ -5,8 +5,7 @@
     <div class="grid  container--main  writing">
 
            <div class="grid__item  one-third  lap-one-whole  palm-one-whole">
-                 <h2 class="writing__subheading"><a href="writing.html">Notes & Ruminations</a></h2>
-                 <h3 class="projects__sub-subheading">Portfolio</h3>
+              <h2 class="writing__subheading"><a href="/writing/notes">Notes & Scribbles</a></h2>
            </div><!--
 
         --><div class="grid__item  two-thirds  lap-one-whole  palm-one-whole  about__intro">
@@ -14,7 +13,7 @@
 
            </div>
 
-            <hr class="rule--hero  rule--resume  push--soft-top">
+            <hr class="rule--hero  rule--resume   dotted   push--soft-top">
     </div>
 
 
@@ -42,16 +41,11 @@
       --><article class="grid__item  two-thirds  lap-one-whole  palm-one-whole  negative--top2x article">
             {{body}}
 
-            <hr class="rule--hero  rule--resume  push--soft-top">
-
-        </article><!--
-      --><div class="grid__item one-third lap-one-whole palm-one-whole"></div>
-         <div class="grid__item  one-third lap-one-whole  palm-one-whole  push--top  issue">
-               <span class="issue__number">Issue 1<span><br>  <a href="/writing">
-               <p class="issue__overline">Back to the Future:</p>
-               <p class="issue__headline"> New Beginning</p>
-               <p class="issue__season">Summer/Fall 2014</p></a>
-          </div>
+             <a class='tweet-button' href='https://twitter.com/intent/tweet?original_referer={{ current.permalink | escape }}&text={{ tweet_text | escape }}&tw_p=tweetbutton&url={{ current.permalink | escape }}&via={{ site.meta['twitter_id'] }}' target='_blank'>
+                <span><i class="fa fa-twitter"></i></span>
+                <span id='twitter-count' class='count'></span>
+            </a>
+        </article>
     </section>
 
 

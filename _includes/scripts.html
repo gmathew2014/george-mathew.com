@@ -1,0 +1,34 @@
+<scripts src="/build/js/main.min.js">
+
+<!-- Tweet Buttons -->
+
+<script>
+  function count_callback(data) {
+    var gm_count = parseInt(data.count);
+    var gm_tweet = "1";
+    var gm_count_html = '<span class=data-count>' + gm_count + '</span>';
+    if (gm_count > 0) {
+      document.getElementById('twitter-count').innerHTML = gm_count_html;
+    }
+    else {
+      document.getElementById('twitter-count').innerHTML = gm_tweet;
+    }
+
+  }
+  var script = document.createElement('script');
+  script.setAttribute("src", 'http://urls.api.twitter.com/1/urls/count.json?callback=count_callback&url={{ current.permalink | escape }}');
+  document.getElementsByTagName("head")[0].appendChild(script);
+</script>
+
+<!-- GM Google Analytics -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57135951-1', 'auto');
+  ga('send', 'pageview');
+
+</script>

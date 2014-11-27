@@ -1,0 +1,57 @@
+{% assign post = current %}
+
+{% capture content %}
+
+    <!-- ######################   Writing >> Header  ###################### -->
+
+    <div class="grid  container--main  writing">
+
+           <div class="grid__item  one-third  lap-one-whole  palm-one-whole">
+
+           </div><!--
+
+        --><div class="grid__item  two-thirds  lap-one-whole  palm-one-whole  about__intro">
+                <h1 class="writing__heading">Notes & Scribbles</h1>
+
+                <p class="writing__introtext">
+                The following are notes and thoughts in process. It will serve as a space to test out ideas, concepts and snippets of design and development work.</p>
+                </p>
+           </div>
+
+           <hr class="rule--hero  rule--resume  dotted  push--soft-top">
+    </div>
+
+
+    <!-- ######################   Writing Page >> Article Feed ###################### -->
+
+     <!-- Begin Article Feed Content -->
+
+
+  <div class="grid  container--main   writing__notes">
+      <div class="grid__item  one-third  lap-one-whole  palm-one-whole  negative--top2x ">
+      </div><!--
+
+       --><div class="grid__item  two-thirds  lap-one-whole  palm-one-whole  negative--top2x  writing__feed">
+
+              {% for post in posts %}
+
+                        <h2 class="writing__beta"> {{post.meta['title__overline']}}</h2>
+                        <h1 class="writing__alpha"><a href="{{post.url}}">{{post.title}}</a></h1>
+                        <p class="writing__date">{{post.date | date: "%b %d, %Y"}}</p>
+
+              {% endfor %}
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+{% endcapture %}
+
+{% include 'layouts/default' %}
