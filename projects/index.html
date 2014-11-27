@@ -29,8 +29,10 @@
 
     <div class="grid  container--main  projects__feed">
 
-
-        <br><br><center><h1>Coming soon.</h1></center><br><br>
+      {% for post in posts limit:20 %}<div class="grid__item  one-third  lap-one-third  palm-one-whole">
+            <a href="{{post.url}}"><img src="{{post.meta['thumbnail']}}"></a>
+        </div><!--
+       -->{% endfor %}
 
 
     </div>
