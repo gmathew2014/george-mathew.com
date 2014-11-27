@@ -1,3 +1,4 @@
+#Defaults
 .DS_Store
 .sass-cache
 javascript/**
@@ -5,6 +6,7 @@ templates/**
 images/**
 node_modules/**
 build/**
-config.ru
 
+#Siteleaf
 .siteleafignore
+config.ru
