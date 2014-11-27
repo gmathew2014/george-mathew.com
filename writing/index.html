@@ -24,17 +24,54 @@
      <!-- Begin Article Feed Content -->
 
 
-
-
-
+{% for issue in taxonomy['Issue'] order:descending sort_by:title %}
 
 
   <div class="grid  container--main  writing__content">
 
-        <br><br><center><h1>Coming soon.</h1></center><br><br>
+        <div class="grid__item  one-third lap-one-whole  palm-one-whole  negative--top2x  issue">
+                        <a href="{{issue.url}}"><span class="issue__number">{{issue}}<span><br></a>
+              {% for topic in taxonomy['Topic'] %}
+                {% for post in issue.posts %}
+                  {% if post.taxonomy['Topic'].values contains topic.value %}
+                    <p class="issue__overline">{{post.meta['issue__overline']}}</p>
+                    <p class="issue__headline"> {{post.meta['issue__headline']}}</p>
+                    <p class="issue__season">{{post.meta['issue__season']}}</p>
+                  {% endif %}
+                {% endfor %}
+              {% endfor %}
+          </div><!--
+
+       --><div class="grid__item  two-thirds  lap-one-whole  palm-one-whole  negative--top2x  writing__feed">
+              {% for topic in taxonomy['Topic']  %}
+                {% for post in issue.posts %}
+                  {% if post.taxonomy['Topic'].values contains topic.value %}
+
+
+                    <h4 class="writing__category  {{topic.value}}">{{topic}}</h4>
+
+                    {% break %}
+
+
+                  {% endif %}
+                {% endfor %}
+
+                {% for post in issue.posts  %}
+                  {% if post.taxonomy['Topic'].values contains topic.value %}
+                        <h2 class="writing__beta"> {{post.meta['title__overline']}}</h2>
+                        <h1 class="writing__alpha"><a href="{{post.url}}">{{post.title}}</a></h1>
+                        <p class="writing__date">{{post.date | date: "%b %d, %Y"}}</p>
+
+                  {% endif %}
+                {% endfor %}
+              {% endfor %}
+
+
+        </div>
 
     </div>
 
+{% endfor %}
 
 
 

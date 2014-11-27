@@ -1,0 +1,103 @@
+
+// Front Page  >>  Hero Section         -------------------##############
+
+.hero {
+	text-align: center;
+	// @include media-query(desk) {
+	//   		width: 50%;
+	// }
+}
+
+.hero__symbol {
+	margin-top: -$base-spacing-unit;
+	margin-bottom: $base-spacing-unit;
+	@include media-query(palm) {
+		max-width: 80px;
+	}
+}
+
+.hero__hello {
+	letter-spacing: -1.3px;
+	@include media-query(palm) {
+		@include font-size(68px);
+	}
+}
+
+.hero__intro {
+	@include font-size(32px);
+	font-weight: 400;
+	@include media-query(palm) {
+		@include font-size(18px);
+	}
+	line-height: 1;
+}
+
+.hero__intro-var {
+	font-family: $brand-altface;
+	font-weight: 900;
+	@include font-size(25px);
+	@include media-query(palm) {
+		@include font-size(16px);
+		letter-spacing: 1px;
+	}
+	text-transform: uppercase;
+	letter-spacing: 2px;
+
+}
+
+.rule--hero {
+	color: #d3d3d3;
+	border:none;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    margin-bottom: $base-spacing-unit - 1px;
+    margin-bottom: (($base-spacing-unit - 1px) / $base-font-size)*1rem;
+    margin-top: (($base-spacing-unit + 5px) / $base-font-size)*1rem;
+}
+
+
+// Front Page  >>  Specialties          -------------------##############
+
+
+.hero__subheading {
+	font-family: $brand-altface;
+	font-size: 14px;
+	font-weight: 800;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+    margin-top: (($base-spacing-unit + 5px) / $base-font-size)*1rem;
+    margin-bottom: 16px;
+}
+
+.centered {
+	margin: 0 auto;
+	margin-bottom: $base-spacing-unit;
+	width: 50%;
+	@include media-query(palm){
+		width: 100%;
+	}
+}
+
+.btn--primary {
+	background: white;
+	border: 5px solid $brand-color;
+	font-family: $brand-altface;
+	font-weight: 800;
+	letter-spacing: 1px;
+	@include font-size(17px);
+	text-transform: uppercase;
+	padding: 16px 38px;
+	margin-bottom: $base-spacing-unit*2;
+		&:hover {
+		background: $brand-color;
+		color: white;
+		padding: 16px 42px;
+
+	}
+
+  webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+     -ms-transition: all 0.1s ease-in-out;
+         transition: all 0.1s ease-in-out;
+
+}
