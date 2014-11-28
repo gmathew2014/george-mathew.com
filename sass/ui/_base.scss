@@ -60,7 +60,10 @@ a:hover {
 
 pre {
 	font-family: Monaco,'Courier New','Courier',monospace;
-	font-size: 16px;
+	font-size: 13px;
+	@include media-query(desk) {
+		font-size: 15px;
+	}
 	background: rgba(0,0,0,0.05);
 	margin-bottom: 20px;
 	padding: 20px;
