@@ -6,6 +6,7 @@ templates/**
 images/**
 node_modules/**
 build/**
+artwork/**
 
 #Siteleaf
 .siteleafignore
