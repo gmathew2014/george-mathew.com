@@ -1,13 +1,13 @@
 <!-- Main Scripts -->
 
-<scripts src="/build/js/main.min.js">
+<script src="/build/js/main.min.js"></script>
 
 <!-- Tweet Buttons -->
 
 <script>
   function count_callback(data) {
     var gm_count = parseInt(data.count);
-    var gm_tweet = "1";
+    var gm_tweet = "Share";
     var gm_count_html = '<span class=data-count>' + gm_count + '</span>';
     if (gm_count > 0) {
       document.getElementById('twitter-count').innerHTML = gm_count_html;
@@ -33,4 +33,8 @@
   ga('create', 'UA-57135951-1', 'auto');
   ga('send', 'pageview');
 
+</script>
+
+<script>
+  console.log('hello world!!!!');
 </script>
