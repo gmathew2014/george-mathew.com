@@ -5,17 +5,17 @@
     <div class="grid  container--main  writing">
 
            <div class="grid__item  one-third  lap-one-whole  palm-one-whole">
-                 <h2 class="writing__subheading"><a href="writing.html">Notes & Ruminations</a></h2>
+                 <h2 class="writing__subheading--main"><a href="writing.html">Notes & Ruminations</a></h2>
            </div><!--
 
         --><div class="grid__item  two-thirds  lap-one-whole  palm-one-whole  about__intro">
                 <h1 class="writing__heading">Writings, &c.</h1>
 
                 <p class="writing__introtext">
-                I hope the following space will serve as an area to test out various ideas and concepts.  As Mr. <a href="http://en.wikipedia.org/wiki/Michel_de_Montaigne" class="about__hyperlink" target=_blank>Montaigne</a> may have said,<em> “Qu'est-ce que je sais?”</em></p>
+                I hope the following space will serve as an area to test out various ideas and concepts. As Mr. <a href="http://en.wikipedia.org/wiki/Michel_de_Montaigne" class="about__hyperlink" target=_blank>Montaigne</a> may have said,<em> “Qu'est-ce que je sais?”</em></p>
            </div>
 
-            <hr class="rule--hero  dotted  rule--resume">
+            <hr class="rule--hero  rule--resume">
     </div>
 
 
@@ -30,7 +30,7 @@
   <div class="grid  container--main  writing__content">
 
         <div class="grid__item  one-third lap-one-whole  palm-one-whole  negative--top2x  issue">
-                        <a href="{{issue.url}}"><span class="issue__number">{{issue}}<span><br></a>
+                        <!-- <a href="{{issue.url}}"> --><span class="issue__number">{{issue}}<span><br><!-- </a> -->
               {% for topic in taxonomy['Topic'] %}
                 {% for post in issue.posts %}
                   {% if post.taxonomy['Topic'].values contains topic.value %}
