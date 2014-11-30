@@ -146,6 +146,12 @@
 
 }
 
+.projects__content {
+	a:link {
+		border-bottom: 1px solid grey;
+	}
+}
+
 
 .taxonomy li.tags:not(:last-child):after {
 		content:',';
