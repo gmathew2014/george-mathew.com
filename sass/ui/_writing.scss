@@ -13,8 +13,9 @@
 	text-rendering: optimizeLegibility;
 }
 
-.writing__subheading {
-	margin-top: 8.5%;
+.writing__subheading,
+.writing__subheading--main {
+	margin-top: 50px;
 	font-weight: 400;
 	font-size: 20px;
 	border-bottom-style: dotted;
@@ -400,7 +401,14 @@
 	text-transform: uppercase;
 }
 
+.subheading--marginA {
+	@include media-query(desk){
+		margin-top: 22px;
+	}
+}
 
-
-
-
+.subheading--marginB {
+	@include media-query(desk){
+		margin-top: 70px;
+	}
+}
