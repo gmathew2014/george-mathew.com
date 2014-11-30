@@ -1,7 +1,7 @@
 #Defaults
 .DS_Store
 .sass-cache
-javascript/**
+# javascript/**
 templates/**
 images/**
 node_modules/**
