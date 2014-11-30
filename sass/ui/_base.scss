@@ -9,7 +9,6 @@
 }
 body {
 	background: $brand-quinary;
-	// background: white;
 }
 
 //  Minion Pro weights:  400 (regular and italic), 700 (regular and italic)
@@ -36,6 +35,9 @@ $brand-altface: proxima-nova, sans-serif;
 .container--main {
 	padding-top: $base-spacing-unit;
 	max-width: 960px;
+	// @include media-query(desk-wide){
+ //    max-width: 1100px;
+	// }
 	width: 90%;
 	margin: 0 auto;
 }
@@ -60,9 +62,9 @@ a:hover {
 
 pre {
 	font-family: Monaco,'Courier New','Courier',monospace;
-	font-size: 13px;
+	font-size: 14px;
 	@include media-query(desk) {
-		font-size: 15px;
+		font-size: 16px;
 	}
 	background: rgba(0,0,0,0.05);
 	margin-bottom: 20px;
@@ -188,4 +190,28 @@ figcaption {
 	padding-bottom: 5px;
 	border-bottom: 1px dotted grey;
 
+}
+
+.pattern {
+ background: url('/images/pattern.jpg') no-repeat center center scroll;
+  background-size: contain;
+	height: 150px;
+	width: 100%;
+	margin-top: -55px;
+	margin-bottom: -55px;
+	@include media-query(lap) {
+		margin-top: -40px;
+		margin-bottom: -20px;
+	}
+	@include media-query(desk) {
+		background: url('/images/pattern.jpg') no-repeat center center scroll;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		height: 150px;
+		width: 100%;
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
 }
