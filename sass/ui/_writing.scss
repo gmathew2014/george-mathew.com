@@ -233,6 +233,14 @@
 			font-size: 22px;
 		}
 	}
+	// Lists      						------------------##############
+
+	ul li{
+		@include media-query(desk) {
+			font-size: 1.2em;
+			line-height: 1.5;
+		}
+	}
 }
 
 .article__meta {
