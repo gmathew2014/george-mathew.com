@@ -191,27 +191,3 @@ figcaption {
 	border-bottom: 1px dotted grey;
 
 }
-
-.pattern {
- background: url('/images/pattern.jpg') no-repeat center center scroll;
-  background-size: contain;
-	height: 150px;
-	width: 100%;
-	margin-top: -55px;
-	margin-bottom: -55px;
-	@include media-query(lap) {
-		margin-top: -40px;
-		margin-bottom: -20px;
-	}
-	@include media-query(desk) {
-		background: url('/images/pattern.jpg') no-repeat center center scroll;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		height: 150px;
-		width: 100%;
-		margin-top: 0px;
-		margin-bottom: 0px;
-	}
-}
