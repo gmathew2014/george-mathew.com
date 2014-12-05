@@ -235,7 +235,7 @@
 	}
 	// Lists      						------------------##############
 
-	ul li{
+	ul li, ol li{
 		@include media-query(desk) {
 			font-size: 1.2em;
 			line-height: 1.5;
