@@ -29,9 +29,18 @@ module.exports = function(grunt) {
                 style: 'compressed'
             },
             files: {
-                'build/css/style.css': 'sass/style.scss'
+                'build/css/style-auto.css': 'sass/style.scss'
             }
         }
+    },
+    autoprefixer: {
+      // options: {
+      //   browsers: ['last 8 versions',]
+      // },
+      single_file: {
+          src:  'build/css/style-auto.css',
+          dest: 'build/css/style.css'
+      }
     },
     watch: {
       js: {
@@ -43,7 +52,7 @@ module.exports = function(grunt) {
       },
       css: {
         files: ['sass/**/*.scss'],
-        tasks: ['sass'],
+        tasks: ['sass', 'autoprefixer'],
         options: {
           livereload: true,
         }
@@ -54,4 +63,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 };
