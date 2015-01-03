@@ -29,14 +29,35 @@
 
     <div class="grid  container--main  projects__feed">
 
-      {% for post in posts limit:20 %}<div class="grid__item  one-third  lap-one-third  palm-one-whole">
+    <!-- Begin Featured Feed Content -->
+    {% assign featured_ids = '' %}
+    {% for post in taxonomy['tags']['featured'].posts limit:2 %}
+      {% assign featured_ids = featured_ids | append:',' | append:post.id %}
+      <div class="grid__item   one-half  lap-one-whole  palm-one-whole">
+        <a href="{{post.url}}" class="projects__featured">
+            <figure class="project__animate">
+                <img src="{{post.meta['thumbnail']}}" class="project__image">
+            </figure>
+            <h4 class="featured__title">
+              {{post.meta['featured__title']}}
+            </h4>
+            <h5 class="featured__subtitle">{{post.meta['featured__subtitle']}} </h3>
+        </a>
+      </div><!--
+      -->{% endfor %}
+
+
+      <hr class="rule--hero  rule--resume  dotted  push--soft-top">
+
+      <!-- Begin Non-Featured Feed Content -->
+      {% for post in posts limit:20 %}{% unless featured_ids contains post.id %}<div class="grid__item  one-third  lap-one-third  palm-one-whole">
             <a href="{{post.url}}">
               <figure class="project__animate">
               <img src="{{post.meta['thumbnail']}}" class="project__image">
               </figure>
             </a>
         </div><!--
-       -->{% endfor %}
+       -->{% endunless %}{% endfor %}
 
 
     </div>

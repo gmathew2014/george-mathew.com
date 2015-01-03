@@ -170,3 +170,21 @@
 .project__image:hover {
 	transform: scale(1.04);
 }
+
+.projects__featured {
+	&:hover  {
+		color: black;
+	}
+}
+
+.featured__title {
+	font-family: proxima-nova;
+	text-align: center;
+	margin-bottom: 5px;
+	margin-top: -12px
+}
+
+.featured__subtitle {
+	text-align: center;
+	font-weight: normal
+}
